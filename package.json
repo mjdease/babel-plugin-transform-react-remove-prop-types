@@ -12,7 +12,8 @@
     "prebuild": "rm -rf lib/",
     "build": "babel src --out-dir lib",
     "flow": "flow",
-    "version": "npm run build && pkgfiles"
+    "version": "npm run build && pkgfiles",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
