@@ -11,7 +11,11 @@ function isPathReactClass(path, globalOptions) {
   const node = path.node
   const matchers = globalOptions.classNameMatchers
 
-  if (path.matchesPattern('React.Component') || path.matchesPattern('React.PureComponent')) {
+  if (
+    path.matchesPattern('React.Component')
+    || path.matchesPattern('React.PureComponent')
+    || path.matchesPattern('preact.Component')
+  ) {
     return true
   }
 
